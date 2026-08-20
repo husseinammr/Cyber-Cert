@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #070b14;
+  color: #e2e8f0;
+}
+
+.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.bg-grid-overlay {
+  background-image: linear-gradient(to right, rgba(148,163,184,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148,163,184,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.glass {
+  background: rgba(14, 21, 36, 0.55);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.light .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #22d3ee, #3b82f6, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(148,163,184,0.25); border-radius: 999px; }
+
+/* Developer identity — subtle light-sweep animation on the homepage credit line */
+.dev-name-sweep {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    100deg,
+    #e2e8f0 30%,
+    #22d3ee 45%,
+    #ffffff 50%,
+    #22d3ee 55%,
+    #e2e8f0 70%
+  );
+  background-size: 220% 100%;
+  background-position: 0% 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: dev-name-sweep-anim 5s ease-in-out infinite;
+  will-change: background-position;
+}
+
+@keyframes dev-name-sweep-anim {
+  0% { background-position: 130% 0%; }
+  50% { background-position: -30% 0%; }
+  100% { background-position: 130% 0%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dev-name-sweep {
+    animation: none;
+    background-position: 0% 0%;
+    color: #e2e8f0;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+  }
+}

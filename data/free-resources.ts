@@ -1,0 +1,267 @@
+import { FreeResource } from "@/lib/types";
+
+export const freeResources: FreeResource[] = [
+  {
+    slug: "portswigger-academy",
+    name: "PortSwigger Web Security Academy",
+    provider: "PortSwigger",
+    type: "free-training",
+    category: ["appsec", "pentest"],
+    level: "beginner",
+    description:
+      "A completely free, hands-on web security training platform with interactive labs covering the OWASP Top 10 and advanced web vulnerabilities. No account required to learn; free account for lab progress tracking.",
+    url: "https://portswigger.net/web-security",
+  },
+  {
+    slug: "tryhackme",
+    name: "TryHackMe",
+    provider: "TryHackMe",
+    type: "free-training",
+    category: ["pentest", "soc", "red-team", "blue-team"],
+    level: "beginner",
+    description:
+      "A gamified, browser-based platform with free rooms covering security fundamentals, offensive and defensive skills. A paid subscription unlocks additional content and paths.",
+    url: "https://tryhackme.com",
+  },
+  {
+    slug: "hackthebox",
+    name: "Hack The Box",
+    provider: "Hack The Box",
+    type: "free-training",
+    category: ["pentest", "red-team"],
+    level: "intermediate",
+    description:
+      "A free-to-start platform offering vulnerable machines and challenges to practice penetration testing. Free tier gives access to active machines; VIP subscription unlocks the full library.",
+    url: "https://www.hackthebox.com",
+  },
+  {
+    slug: "letsdefend",
+    name: "LetsDefend",
+    provider: "LetsDefend",
+    type: "free-training",
+    category: ["soc", "blue-team"],
+    level: "beginner",
+    description:
+      "A blue-team-focused platform simulating a real SOC environment with alerts to investigate. Offers a free tier with limited monthly content.",
+    url: "https://letsdefend.io",
+  },
+  {
+    slug: "cisco-skills-for-all",
+    name: "Cisco Networking Basics (Skills for All)",
+    provider: "Cisco",
+    type: "free-course",
+    category: ["network"],
+    level: "beginner",
+    description:
+      "Free, self-paced courses from Cisco covering networking and cybersecurity fundamentals, with optional free digital badges upon completion.",
+    url: "https://skillsforall.com",
+  },
+  {
+    slug: "cisco-intro-to-cyber",
+    name: "Introduction to Cybersecurity",
+    provider: "Cisco (Skills for All)",
+    type: "free-badge",
+    category: ["soc"],
+    level: "beginner",
+    description:
+      "A free introductory course and digital badge from Cisco covering the basics of cybersecurity threats and careers.",
+    url: "https://skillsforall.com/course/introduction-to-cybersecurity",
+  },
+  {
+    slug: "ibm-cybersecurity-fundamentals",
+    name: "IBM Cybersecurity Fundamentals Badge",
+    provider: "IBM (via Coursera / IBM SkillsBuild)",
+    type: "free-badge",
+    category: ["soc"],
+    level: "beginner",
+    description:
+      "A free introductory badge/course from IBM SkillsBuild covering core cybersecurity concepts for absolute beginners.",
+    url: "https://skillsbuild.org",
+  },
+  {
+    slug: "microsoft-learn-security",
+    name: "Microsoft Learn — Security, Compliance & Identity",
+    provider: "Microsoft",
+    type: "free-training",
+    category: ["cloud", "security-engineering"],
+    level: "beginner",
+    description:
+      "Free, official Microsoft Learn paths covering security fundamentals (SC-900) and role-based Azure security content, usable as free exam prep.",
+    url: "https://learn.microsoft.com/en-us/training/browse/?products=m365&resource_type=learning%20path",
+  },
+  {
+    slug: "aws-skill-builder",
+    name: "AWS Skill Builder — Security Learning Plans",
+    provider: "Amazon Web Services",
+    type: "free-course",
+    category: ["cloud"],
+    level: "beginner",
+    description:
+      "Free digital training from AWS, including foundational and security-focused learning plans; some advanced/lab content requires a paid subscription.",
+    url: "https://skillbuilder.aws",
+  },
+  {
+    slug: "csa-security-guidance",
+    name: "CSA Security Guidance (free document)",
+    provider: "Cloud Security Alliance",
+    type: "free-training",
+    category: ["cloud", "grc"],
+    level: "intermediate",
+    description:
+      "The free official guidance document used as the study basis for the CCSK certification, covering cloud security architecture and governance domains.",
+    url: "https://cloudsecurityalliance.org/artifacts/security-guidance-v4",
+  },
+  {
+    slug: "owasp-top-10",
+    name: "OWASP Top 10",
+    provider: "OWASP Foundation",
+    type: "free-training",
+    category: ["appsec"],
+    level: "beginner",
+    description:
+      "The free, industry-standard awareness document describing the top 10 most critical web application security risks. Foundational reading for any AppSec learner.",
+    url: "https://owasp.org/www-project-top-ten/",
+  },
+  {
+    slug: "cyberdefenders",
+    name: "CyberDefenders",
+    provider: "CyberDefenders",
+    type: "free-training",
+    category: ["blue-team", "dfir", "soc"],
+    level: "intermediate",
+    description:
+      "A blue-team-focused platform with free challenge labs covering DFIR, log/network forensics, and threat hunting scenarios.",
+    url: "https://cyberdefenders.org",
+  },
+  {
+    slug: "sans-cyber-aces",
+    name: "SANS Cyber Aces Online",
+    provider: "SANS Institute",
+    type: "free-course",
+    category: ["network", "security-engineering"],
+    level: "beginner",
+    description:
+      "Free, self-paced tutorials from SANS covering operating systems, networking, and system administration fundamentals for security.",
+    url: "https://www.sans.org/cyberaces/",
+  },
+  {
+    slug: "kali-linux-docs",
+    name: "Kali Linux Official Documentation & Training",
+    provider: "OffSec",
+    type: "free-training",
+    category: ["pentest", "red-team"],
+    level: "beginner",
+    description:
+      "Free official documentation and the introductory 'PEN-103: Kali Linux Revealed' course for learning the primary distribution used in penetration testing.",
+    url: "https://www.kali.org/docs/",
+  },
+  {
+    slug: "malware-traffic-analysis",
+    name: "Malware-Traffic-Analysis.net",
+    provider: "Independent (Brad Duncan)",
+    type: "free-lab",
+    category: ["malware", "dfir", "blue-team"],
+    level: "intermediate",
+    description:
+      "A long-running free resource providing real packet captures and exercises for practicing malware traffic analysis and network forensics.",
+    url: "https://www.malware-traffic-analysis.net",
+  },
+
+  // ── Added: verified free resources, focused on Red Team / Blue Team / Networking, plus a few limited foundational items ──
+  {
+    slug: "arcx-cti-101",
+    name: "Cyber Threat Intelligence 101",
+    provider: "arcX",
+    type: "free-badge",
+    category: ["threat-hunting"],
+    level: "beginner",
+    language: "English",
+    description:
+      "A genuinely free, on-demand introductory course from arcX (a CREST-accredited training provider) covering threat actors, the intelligence lifecycle, and legal/ethical considerations in CTI. Completing the course and its exam earns a free arcX Foundation Level Threat Intelligence Analyst (FTIA) certificate — the paid CTI Practitioner course (aligned to the CREST CPTIA exam) is a separate, more advanced offering.",
+    url: "https://arcx.io/courses/cyber-threat-intelligence-101",
+  },
+  {
+    slug: "cybrary-free-tier",
+    name: "Cybrary (Free Tier)",
+    provider: "Cybrary",
+    type: "free-training",
+    category: ["soc", "security-engineering", "pentest"],
+    level: "beginner",
+    language: "English",
+    description:
+      "A cybersecurity training platform with a free membership tier offering introductory courses and career paths across SOC, penetration testing, and IT fundamentals. Many advanced courses, labs, and certificate-prep content require a paid subscription — check each course's access tier before assuming it's free.",
+    url: "https://www.cybrary.it",
+  },
+  {
+    slug: "ibm-skillsbuild-cybersecurity",
+    name: "IBM SkillsBuild — Cybersecurity",
+    provider: "IBM",
+    type: "free-badge",
+    category: ["soc", "security-engineering"],
+    level: "beginner",
+    language: "English",
+    description:
+      "Free, self-paced cybersecurity courses from IBM SkillsBuild (including introductions to cybersecurity tools, common attacks, and career paths), each with a free digital credential/badge on completion. No cost to enroll or to earn the badge.",
+    url: "https://skillsbuild.org/students/course-catalog/cybersecurity",
+  },
+  {
+    slug: "harvard-cs50-cybersecurity",
+    name: "CS50's Introduction to Cybersecurity",
+    provider: "Harvard University",
+    type: "free-badge",
+    category: ["security-engineering"],
+    level: "beginner",
+    language: "English",
+    description:
+      "Harvard's introductory cybersecurity course for technical and non-technical learners, covering account security, data protection, system hardening, software security, and privacy. Free to audit via edX or Harvard's own OpenCourseWare, and a free CS50 certificate is available directly from cs50.harvard.edu upon completing all problem sets and the final project. A separate, paid verified certificate is also offered through edX for those who want it.",
+    url: "https://cs50.harvard.edu/cybersecurity/",
+  },
+  {
+    slug: "netacad-cybersecurity-path",
+    name: "Cisco Networking Academy — Cybersecurity Career Path",
+    provider: "Cisco",
+    type: "free-training",
+    category: ["network", "soc"],
+    level: "beginner",
+    language: "English & Arabic",
+    description:
+      "A free, structured series of Cisco courses and resources focused on protecting computer systems and preparing learners for cybersecurity careers, available with Arabic-language support alongside English.",
+    url: "https://www.netacad.com/career-paths/cybersecurity",
+  },
+  {
+    slug: "edraak-cybersecurity",
+    name: "تخصص الأمن السيبراني (Cybersecurity Specialization)",
+    provider: "إدراك (Edraak)",
+    type: "free-badge",
+    category: ["security-engineering", "soc"],
+    level: "beginner",
+    language: "Arabic",
+    description:
+      "A free, Arabic-language cybersecurity specialization from Edraak consisting of five short courses (from an introduction to cybersecurity through attack techniques and career paths), ending in a free, printable completion certificate. No prior experience required.",
+    url: "https://www.edraak.org",
+  },
+  {
+    slug: "doroob-training",
+    name: "منصة دروب (Doroob)",
+    provider: "Human Resources Development Fund (HRDF), Saudi Arabia",
+    type: "free-training",
+    category: ["security-engineering", "soc"],
+    level: "beginner",
+    language: "Arabic",
+    description:
+      "A free, government-backed Arabic-language e-learning platform (part of Saudi Arabia's HRDF/'Hadaf') offering short courses across many fields, including cybersecurity awareness and fundamentals, with completion certificates at no cost. Availability and eligibility details are set by the platform — verify current course offerings on the official site.",
+    url: "https://doroob.sa",
+  },
+  {
+    slug: "m3aarf-cybersecurity",
+    name: "دورات الأمن السيبراني (Cybersecurity Courses)",
+    provider: "معارف (Ma3aarf)",
+    type: "free-training",
+    category: ["security-engineering"],
+    level: "beginner",
+    language: "Arabic",
+    description:
+      "Arabic-language, video-based cybersecurity courses covering fundamentals and protecting systems from breaches. A completion certificate is offered — verify current certificate terms and any associated cost directly on the platform before relying on it for job applications.",
+    url: "https://www.m3aarf.com",
+  },
+];

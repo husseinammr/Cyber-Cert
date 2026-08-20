@@ -1,0 +1,186 @@
+import { CareerPath } from "@/lib/types";
+
+export const careerPaths: CareerPath[] = [
+  {
+    slug: "soc-analyst",
+    name: "SOC Analyst",
+    summary:
+      "Monitor security alerts, triage incidents, and escalate threats within a Security Operations Center. The most common entry point into a blue-team career.",
+    skills: ["Networking fundamentals", "Log analysis", "SIEM tools", "Alert triage", "Basic malware identification"],
+    tools: ["Splunk", "Microsoft Sentinel", "Wireshark", "Suricata/Snort"],
+    learningOrder: [
+      "Networking & OS fundamentals",
+      "Security fundamentals (Security+)",
+      "SIEM tool familiarity (Splunk Core User)",
+      "Practice on SOC simulation platforms (LetsDefend, TryHackMe SOC path)",
+      "Learn incident response basics",
+    ],
+    labs: ["letsdefend", "tryhackme", "cyberdefenders"],
+    certifications: ["comptia-security-plus", "splunk-core-user", "comptia-cysa-plus"],
+    progression: ["Tier 1 SOC Analyst", "Tier 2 SOC Analyst", "Senior SOC Analyst / Threat Hunter", "SOC Team Lead"],
+  },
+  {
+    slug: "security-analyst",
+    name: "Security Analyst",
+    summary:
+      "A broader analyst role covering vulnerability management, security monitoring, and support for security operations across an organization.",
+    skills: ["Vulnerability assessment", "Risk basics", "Security tooling", "Reporting"],
+    tools: ["Nessus/OpenVAS", "SIEM tools", "Ticketing systems"],
+    learningOrder: ["Security fundamentals", "Vulnerability management basics", "Reporting and communication skills", "Specialize toward SOC, GRC, or AppSec"],
+    labs: ["tryhackme", "cyberdefenders"],
+    certifications: ["comptia-security-plus", "comptia-cysa-plus"],
+    progression: ["Junior Security Analyst", "Security Analyst", "Senior Security Analyst", "Security Engineer / Manager"],
+  },
+  {
+    slug: "penetration-tester",
+    name: "Penetration Tester",
+    summary:
+      "Simulate real-world attacks against systems, networks, and applications under authorization to identify exploitable vulnerabilities before attackers do.",
+    skills: ["Manual exploitation", "Scripting (Python/Bash)", "Active Directory attacks", "Report writing"],
+    tools: ["Nmap", "Metasploit", "Burp Suite", "Kali Linux"],
+    learningOrder: [
+      "Networking & Linux fundamentals",
+      "Scripting basics",
+      "Practice on HackTheBox/TryHackMe",
+      "Structured pentest methodology (PenTest+/CEH)",
+      "Hands-on rigorous certification (OSCP)",
+    ],
+    labs: ["hackthebox", "tryhackme", "portswigger-academy"],
+    certifications: ["comptia-pentest-plus", "ceh", "oscp"],
+    progression: ["Junior Penetration Tester", "Penetration Tester", "Senior Penetration Tester", "Red Team Lead"],
+  },
+  {
+    slug: "red-team",
+    name: "Red Team Operator",
+    summary:
+      "Conduct long-term, stealthy adversary simulation exercises testing an organization's detection and response capabilities, beyond scoped pentests.",
+    skills: ["Advanced exploitation", "Command & control frameworks", "Evasion techniques", "Active Directory attack chains"],
+    tools: ["Cobalt Strike / Sliver", "BloodHound", "Mimikatz", "Custom tooling"],
+    learningOrder: ["Master penetration testing fundamentals first", "Learn AD attack paths (BloodHound)", "Study evasion & OPSEC", "Practice adversary simulation exercises"],
+    labs: ["hackthebox"],
+    certifications: ["oscp", "gxpn"],
+    progression: ["Penetration Tester", "Red Team Operator", "Senior Red Teamer", "Red Team Lead"],
+  },
+  {
+    slug: "blue-team",
+    name: "Blue Team Defender",
+    summary:
+      "Focus on detection engineering, defensive hardening, and improving an organization's overall security posture against adversaries.",
+    skills: ["Detection engineering", "Log analysis", "Hardening", "Threat modeling"],
+    tools: ["SIEM/EDR platforms", "Sysmon", "Suricata"],
+    learningOrder: ["Security fundamentals", "SOC analyst experience", "Detection engineering & threat hunting concepts", "Incident handling (GCIH)"],
+    labs: ["letsdefend", "cyberdefenders"],
+    certifications: ["comptia-cysa-plus", "gcih"],
+    progression: ["SOC Analyst", "Blue Team Analyst", "Detection Engineer", "Blue Team Lead"],
+  },
+  {
+    slug: "threat-hunter",
+    name: "Threat Hunter",
+    summary:
+      "Proactively search for hidden threats and adversary activity within an environment that automated tools may have missed, using hypothesis-driven analysis.",
+    skills: ["Threat intelligence", "Behavioral analytics", "Advanced log/EDR analysis", "Hypothesis-driven investigation"],
+    tools: ["EDR platforms", "SIEM", "MITRE ATT&CK framework"],
+    learningOrder: ["Build SOC analyst experience", "Learn MITRE ATT&CK deeply", "Study threat intelligence fundamentals", "Practice hunting exercises"],
+    labs: ["cyberdefenders", "letsdefend"],
+    certifications: ["comptia-cysa-plus", "gcti"],
+    progression: ["SOC Analyst", "Threat Hunter", "Senior Threat Hunter", "Threat Intelligence Lead"],
+  },
+  {
+    slug: "incident-responder",
+    name: "Incident Responder",
+    summary:
+      "Lead the response to active security incidents: containment, eradication, recovery, and post-incident analysis.",
+    skills: ["Incident handling process", "Forensic basics", "Communication under pressure", "Root cause analysis"],
+    tools: ["EDR platforms", "Forensic imaging tools", "SOAR platforms"],
+    learningOrder: ["SOC analyst experience", "Learn the incident handling lifecycle (GCIH)", "Study basic digital forensics", "Practice tabletop exercises"],
+    labs: ["cyberdefenders", "letsdefend"],
+    certifications: ["gcih", "comptia-cysa-plus"],
+    progression: ["SOC Analyst", "Incident Responder", "Senior Incident Responder", "IR Team Lead"],
+  },
+  {
+    slug: "dfir",
+    name: "DFIR Specialist",
+    summary:
+      "Digital Forensics & Incident Response: recover and analyze digital evidence following a security incident for both technical and legal purposes.",
+    skills: ["Disk & memory forensics", "Timeline analysis", "Chain of custody", "Malware triage"],
+    tools: ["Autopsy", "Volatility", "FTK/EnCase", "KAPE"],
+    learningOrder: ["Incident handling foundation (GCIH)", "Windows forensics (GCFE)", "Advanced/memory forensics (GCFA)", "Practice on forensic CTFs"],
+    labs: ["cyberdefenders"],
+    certifications: ["gcih", "gcfe", "gcfa"],
+    progression: ["Junior DFIR Analyst", "DFIR Analyst", "Senior DFIR Investigator", "DFIR Team Lead"],
+  },
+  {
+    slug: "cloud-security",
+    name: "Cloud Security Engineer",
+    summary:
+      "Secure cloud infrastructure and workloads across providers like AWS, Azure, and GCP, covering IAM, data protection, and cloud-native monitoring.",
+    skills: ["Cloud IAM", "Cloud-native security tooling", "Infrastructure as Code security", "Compliance in the cloud"],
+    tools: ["AWS/Azure/GCP consoles", "Terraform", "CloudTrail / Azure Monitor", "GuardDuty / Defender for Cloud"],
+    learningOrder: ["Cloud fundamentals for your target provider", "Vendor-neutral cloud security foundation (CCSK)", "Vendor-specific certification (AWS/Azure)", "Advanced vendor-neutral credential (CCSP)"],
+    labs: ["aws-skill-builder", "microsoft-learn-security"],
+    certifications: ["ccsk", "aws-security-specialty", "azure-security-engineer", "ccsp"],
+    progression: ["Cloud Engineer", "Cloud Security Engineer", "Senior Cloud Security Engineer", "Cloud Security Architect"],
+  },
+  {
+    slug: "appsec",
+    name: "Application Security Engineer",
+    summary:
+      "Secure the software development lifecycle: perform code reviews, security testing, and work with developers to fix vulnerabilities at the source.",
+    skills: ["Secure code review", "OWASP Top 10", "SAST/DAST tooling", "Developer collaboration"],
+    tools: ["Burp Suite", "Semgrep/SAST tools", "OWASP ZAP"],
+    learningOrder: ["Learn web fundamentals & a programming language", "Master OWASP Top 10 (PortSwigger Academy)", "Practice web app pentesting (eWPT)", "Advanced source-code-driven exploitation (OSWE)"],
+    labs: ["portswigger-academy"],
+    certifications: ["owasp-wstg-practitioner", "oswe"],
+    progression: ["Software/QA Engineer", "AppSec Engineer", "Senior AppSec Engineer", "AppSec Architect"],
+  },
+  {
+    slug: "security-engineer",
+    name: "Security Engineer",
+    summary:
+      "Design, build, and maintain the security infrastructure and controls that protect an organization's systems and data.",
+    skills: ["Security architecture", "Network security engineering", "Automation/scripting", "Tool deployment & tuning"],
+    tools: ["Firewalls/IDS/IPS", "IAM platforms", "Infrastructure as Code"],
+    learningOrder: ["Strong IT/networking foundation", "Security fundamentals (Security+/GSEC)", "Specialize in cloud or network security engineering", "Pursue an advanced architecture credential"],
+    labs: ["microsoft-learn-security"],
+    certifications: ["comptia-security-plus", "gsec", "cissp"],
+    progression: ["IT/Network Engineer", "Security Engineer", "Senior Security Engineer", "Security Architect"],
+  },
+  {
+    slug: "grc",
+    name: "GRC Analyst",
+    summary:
+      "Governance, Risk, and Compliance: manage security policy, regulatory compliance, and enterprise risk programs — a less technical, more strategic security track.",
+    skills: ["Risk assessment frameworks", "Compliance frameworks (ISO 27001, NIST, SOC 2)", "Policy writing", "Stakeholder communication"],
+    tools: ["GRC platforms", "Risk register tools", "Audit frameworks"],
+    learningOrder: ["Learn foundational security concepts", "Study major compliance frameworks", "Build risk management expertise (CRISC)", "Advance toward management certification (CISM)"],
+    labs: ["csa-security-guidance"],
+    certifications: ["comptia-security-plus", "crisc", "cism"],
+    progression: ["GRC Analyst", "Senior GRC Analyst", "Risk/Compliance Manager", "CISO track"],
+  },
+  {
+    slug: "security-architect",
+    name: "Security Architect",
+    summary:
+      "A senior technical role designing secure systems and enterprise security architecture, bridging engineering and strategic risk management.",
+    skills: ["Enterprise security architecture", "Threat modeling at scale", "Cross-domain risk management", "Vendor/technology evaluation"],
+    tools: ["Architecture frameworks (SABSA/TOGAF)", "Cloud & on-prem security platforms"],
+    learningOrder: ["Years of hands-on security engineering experience", "Broaden into governance and risk (CISSP)", "Study enterprise architecture frameworks", "Lead cross-functional security design"],
+    labs: [],
+    certifications: ["cissp", "ccsp"],
+    progression: ["Senior Security Engineer", "Security Architect", "Principal Security Architect", "CISO track"],
+  },
+  {
+    slug: "malware-analyst",
+    name: "Malware Analyst",
+    summary:
+      "Reverse-engineer malicious software to understand its behavior, capabilities, and origin, supporting detection engineering and threat intelligence.",
+    skills: ["Static & dynamic analysis", "Assembly/disassembly", "Sandboxing", "Deobfuscation"],
+    tools: ["IDA Free / Ghidra", "x64dbg", "Cuckoo/ANY.RUN sandboxes"],
+    learningOrder: ["Learn programming and x86 assembly basics", "Study malware analysis fundamentals", "Practice with public malware samples (malware-traffic-analysis.net)", "Pursue formal certification (GREM)"],
+    labs: ["malware-traffic-analysis"],
+    certifications: ["malware-analysis-gcfr"],
+    progression: ["Junior Malware Analyst", "Malware Analyst", "Senior Reverse Engineer", "Threat Research Lead"],
+  },
+];
+
+export const careerPathBySlug = (slug: string) => careerPaths.find((p) => p.slug === slug);
